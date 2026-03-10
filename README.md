@@ -31,6 +31,7 @@ thumbnails/
 
 ## File Naming
 
+- `day-01`, `day-02`, `day-03` - Testing days
 - `practice-01.svg`, `practice-02.svg`, `practice-03.svg` - Practice sessions
 - `sprint-qualifying.svg` - Sprint qualifying session
 - `sprint.svg` - Sprint session
