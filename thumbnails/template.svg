@@ -31,11 +31,11 @@
      inkscape:cx="1343.6414"
      inkscape:cy="811.49073"
      inkscape:window-width="1710"
-     inkscape:window-height="1073"
+     inkscape:window-height="1045"
      inkscape:window-x="0"
-     inkscape:window-y="34"
+     inkscape:window-y="62"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" /><defs
+     inkscape:current-layer="g8" /><defs
      id="defs1"><inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect3"
@@ -141,8 +141,8 @@
        inkscape:label="Date"
        transform="translate(26.39625,4.4877724)"><text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.997831;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         x="47.501194"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:38.1px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.997831;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         x="73.904526"
          y="296.20868"
          id="text6"
          inkscape:label="date"><tspan
