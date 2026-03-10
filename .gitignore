@@ -1,0 +1,33 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor state
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Archive exports
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Common design scratch files
+*.autosave
+*.bak
+*.old
+
+# Local review/export folders
+exports/
+out/
+preview/
+previews/
