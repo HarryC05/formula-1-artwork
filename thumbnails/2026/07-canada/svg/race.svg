@@ -10,7 +10,7 @@
    xml:space="preserve"
    inkscape:export-xdpi="45.18441"
    inkscape:export-ydpi="45.18441"
-   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="race.svg"
    inkscape:export-filename="../png/sprint.png"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,12 +28,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.32670043"
-     inkscape:cx="1267.216"
-     inkscape:cy="677.99115"
-     inkscape:window-width="1728"
-     inkscape:window-height="1084"
-     inkscape:window-x="95"
-     inkscape:window-y="1113"
+     inkscape:cx="1268.7464"
+     inkscape:cy="679.5216"
+     inkscape:window-width="1710"
+     inkscape:window-height="1045"
+     inkscape:window-x="0"
+     inkscape:window-y="62"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:path-effect
@@ -219,7 +219,8 @@
              x="76.800072"
              y="349.61252">MAY</tspan></text></g></g><g
        id="g9"
-       clip-path="url(#clipPath9)"><image
+       clip-path="url(#clipPath9)"
+       inkscape:label="flag"><image
          width="104.02694"
          height="52.01347"
          preserveAspectRatio="none"

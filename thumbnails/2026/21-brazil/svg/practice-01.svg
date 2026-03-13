@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.23876399"
-     inkscape:cx="1331.8592"
-     inkscape:cy="753.88254"
+     inkscape:cx="1333.9532"
+     inkscape:cy="753.88253"
      inkscape:window-width="1710"
      inkscape:window-height="1073"
      inkscape:window-x="0"
@@ -219,7 +219,8 @@
              x="76.800072"
              y="349.61252">NOV</tspan></text></g></g><g
        id="g9"
-       clip-path="url(#clipPath9)"><image
+       clip-path="url(#clipPath9)"
+       inkscape:label="flag"><image
          width="81"
          height="56.699997"
          preserveAspectRatio="none"

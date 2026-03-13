@@ -34,7 +34,7 @@
      inkscape:window-x="0"
      inkscape:window-y="34"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3" /><defs
+     inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect3"
@@ -209,4 +209,5 @@
        x="50.492348"
        y="71.539497"
        style="display:inline"
-       clip-path="url(#clipPath1)" /></g></svg>
+       clip-path="url(#clipPath1)"
+       inkscape:label="flag" /></g></svg>

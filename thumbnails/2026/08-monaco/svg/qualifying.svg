@@ -10,7 +10,7 @@
    xml:space="preserve"
    inkscape:export-xdpi="45.18441"
    inkscape:export-ydpi="45.18441"
-   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
    sodipodi:docname="qualifying.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,11 +28,11 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.26778084"
      inkscape:cx="1316.375"
-     inkscape:cy="774.8874"
-     inkscape:window-width="1728"
-     inkscape:window-height="1084"
-     inkscape:window-x="95"
-     inkscape:window-y="1113"
+     inkscape:cy="773.02021"
+     inkscape:window-width="1710"
+     inkscape:window-height="1045"
+     inkscape:window-x="0"
+     inkscape:window-y="62"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:path-effect
@@ -208,4 +208,5 @@
        id="image1"
        x="61.359447"
        y="71.539497"
-       clip-path="url(#clipPath1)" /></g></svg>
+       clip-path="url(#clipPath1)"
+       inkscape:label="flag" /></g></svg>

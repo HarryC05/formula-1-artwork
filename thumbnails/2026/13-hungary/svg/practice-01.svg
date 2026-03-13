@@ -28,13 +28,13 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.27424242"
      inkscape:cx="1347.3481"
-     inkscape:cy="948.06632"
+     inkscape:cy="948.06631"
      inkscape:window-width="1710"
      inkscape:window-height="1073"
      inkscape:window-x="0"
      inkscape:window-y="34"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3" /><defs
+     inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:path-effect
        effect="fillet_chamfer"
        id="path-effect3"
@@ -209,4 +209,5 @@
        id="image1"
        x="30.984444"
        y="71.539497"
-       clip-path="url(#clipPath8)" /></g></svg>
+       clip-path="url(#clipPath8)"
+       inkscape:label="flag" /></g></svg>

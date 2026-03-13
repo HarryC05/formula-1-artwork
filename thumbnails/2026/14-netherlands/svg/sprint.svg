@@ -30,9 +30,9 @@
      inkscape:cx="1320.1699"
      inkscape:cy="1080.995"
      inkscape:window-width="1710"
-     inkscape:window-height="1073"
+     inkscape:window-height="1045"
      inkscape:window-x="0"
-     inkscape:window-y="34"
+     inkscape:window-y="62"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" /><defs
      id="defs1"><inkscape:path-effect
@@ -209,4 +209,5 @@
        id="image1"
        x="51.234444"
        y="71.539497"
-       clip-path="url(#clipPath2)" /></g></svg>
+       clip-path="url(#clipPath2)"
+       inkscape:label="flag" /></g></svg>
