@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="0.19102471"
-     inkscape:cx="1112.4215"
-     inkscape:cy="2078.2652"
+     inkscape:zoom="0.15208656"
+     inkscape:cx="706.83434"
+     inkscape:cy="2406.5243"
      inkscape:window-width="1710"
      inkscape:window-height="1045"
      inkscape:window-x="0"
@@ -85,18 +85,6 @@
        apply_with_radius="true"
        only_selected="false"
        hide_knots="false" />
-    <clipPath
-       clipPathUnits="userSpaceOnUse"
-       id="clipPath1">
-      <circle
-         style="opacity:0.997831;fill:#ffffff;fill-opacity:0.447942;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-         id="circle1"
-         cx="111.98444"
-         cy="112.0395"
-         r="40.020184"
-         inkscape:label="flag-bounding-box"
-         sodipodi:insensitive="true" />
-    </clipPath>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -112,34 +100,16 @@
        ry="2.0972002"
        inkscape:label="background"
        sodipodi:insensitive="true" />
-    <g
-       id="Page-1"
-       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
-       transform="matrix(6.3326956,0,0,6.3326956,-39.961348,401.1145)"
-       inkscape:label="F1 Logo">
-      <mask
-         id="mask-2"
-         fill="#ffffff">
-        <path
-           d="m 101.08681,30 h 0.625 v -2.893125 h 0.0106 L 102.76181,30 h 0.54063 l 1.03937,-2.893125 h 0.0106 V 30 h 0.625 v -3.74875 h -0.91375 l -1.00813,2.935 h -0.0106 l -1.03375,-2.935 h -0.92438 z m -3.459373,-3.181875 h 1.18625 V 30 h 0.65625 v -3.181875 h 1.191873 V 26.25125 H 97.627437 Z M 89.999938,30 119.99994,0 H 101.94369 L 71.944312,30 Z M 85.698688,13.065 H 49.381813 c -11.068126,0 -13.005001,0.586875 -17.745626,5.3275 C 27.202437,22.82625 20.000562,30 20.000562,30 h 15.731876 l 3.753124,-3.753125 c 2.467501,-2.4675 3.740001,-2.723125 8.92125,-2.723125 h 26.83375 z M 31.151812,16.253125 C 27.877437,19.3425 20.753062,26.263125 16.913062,30 H -6.25e-5 c 0,0 13.5525005,-13.513125 21.0849995,-20.9275 C 28.845562,1.685 32.714312,0 46.948687,0 H 98.764313 L 87.544938,11.21875 H 48.001187 c -10.001874,0 -12.249375,0.693125 -16.849375,5.034375 z"
-           id="use1" />
-      </mask>
-      <path
-         d="m 101.08681,30 h 0.625 v -2.893125 h 0.0106 L 102.76181,30 h 0.54063 l 1.03937,-2.893125 h 0.0106 V 30 h 0.625 v -3.74875 h -0.91375 l -1.00813,2.935 h -0.0106 l -1.03375,-2.935 h -0.92438 z m -3.459373,-3.181875 h 1.18625 V 30 h 0.65625 v -3.181875 h 1.191873 V 26.25125 H 97.627437 Z M 89.999938,30 119.99994,0 H 101.94369 L 71.944312,30 Z M 85.698688,13.065 H 49.381813 c -11.068126,0 -13.005001,0.586875 -17.745626,5.3275 C 27.202437,22.82625 20.000562,30 20.000562,30 h 15.731876 l 3.753124,-3.753125 c 2.467501,-2.4675 3.740001,-2.723125 8.92125,-2.723125 h 26.83375 z M 31.151812,16.253125 C 27.877437,19.3425 20.753062,26.263125 16.913062,30 H -6.25e-5 c 0,0 13.5525005,-13.513125 21.0849995,-20.9275 C 28.845562,1.685 32.714312,0 46.948687,0 H 98.764313 L 87.544938,11.21875 H 48.001187 c -10.001874,0 -12.249375,0.693125 -16.849375,5.034375 z"
-         id="Fill-1"
-         style="fill:#201f2c;fill-opacity:1" />
-      <rect
-         style="opacity:0.997831;fill:#15151e;fill-opacity:1;stroke:none;stroke-width:0.223;stroke-opacity:1"
-         id="rect2"
-         width="61.003071"
-         height="35.54092"
-         x="594.11688"
-         y="269.73965"
-         transform="matrix(0.15791064,0,0,0.15791064,3.1521078,-16.976905)" />
-    </g>
+    <path
+       d="M 89.999938,30 119.99994,0 H 101.94369 L 71.944312,30 Z M 85.698688,13.065 H 49.381813 c -11.068126,0 -13.005001,0.586875 -17.745626,5.3275 C 27.202437,22.82625 20.000562,30 20.000562,30 h 15.731876 l 3.753124,-3.753125 c 2.467501,-2.4675 3.740001,-2.723125 8.92125,-2.723125 h 26.83375 z M 31.151812,16.253125 C 27.877437,19.3425 20.753062,26.263125 16.913062,30 H -6.25e-5 c 0,0 13.5525005,-13.513125 21.0849995,-20.9275 C 28.845562,1.685 32.714312,0 46.948687,0 H 98.764313 L 87.544938,11.21875 H 48.001187 c -10.001874,0 -12.249375,0.693125 -16.849375,5.034375 z"
+       id="Fill-1"
+       style="fill:#201f2c;fill-rule:evenodd;stroke:none;stroke-width:1;fill-opacity:1"
+       sodipodi:nodetypes="ccccccssccssccccccsccsc"
+       inkscape:label="logo"
+       transform="matrix(6.3326957,0,0,6.3326957,-39.961349,401.1145)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.997831;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:0.223;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:1;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:0.223;stroke-opacity:1"
        x="21.697973"
        y="63.709557"
        id="text2"
@@ -150,7 +120,7 @@
          y="63.709557"
          id="tspan1">ROUND 01</tspan></text>
     <path
-       style="fill:none;fill-opacity:1;stroke:#ee0000;stroke-width:15;stroke-dasharray:none;stroke-opacity:1"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#ee0000;stroke-width:15;stroke-dasharray:none;stroke-opacity:1"
        d="M 352.06858,56.213936 H 580 a 75,75 45 0 1 75,75.000004 V 900 a 75,75 135 0 1 -75,75 H 0"
        id="path1"
        sodipodi:nodetypes="cccc"
@@ -159,13 +129,22 @@
     <g
        id="g10"
        transform="translate(-61.769566,39.315292)"
-       inkscape:label="info">
+       inkscape:label="info"
+       style="display:inline">
       <g
          id="g9"
          transform="translate(0,-0.2293034)">
+        <rect
+           style="display:inline;opacity:0.997831;fill:#ffffff;fill-opacity:0.447942;stroke-width:10.4938"
+           id="rect3-7"
+           width="484.27597"
+           height="41.009998"
+           x="206.93063"
+           y="70.459373"
+           inkscape:label="location-bounding-box" />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.997831;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            x="203.49101"
            y="110.78185"
            id="text3"
@@ -177,7 +156,7 @@
              y="110.78185">LOCATION</tspan></text>
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:0.997831;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.2778px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:start;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            x="205.16676"
            y="151.7265"
            id="text4"
@@ -200,14 +179,15 @@
     <g
        id="g8"
        inkscape:label="date"
-       transform="translate(308.90368,536.87111)">
+       transform="translate(308.90368,536.87111)"
+       style="display:inline">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.997831;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;opacity:1;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          x="-122.88599"
          y="362.8576"
          id="text6"
-         inkscape:label="date"><tspan
+         inkscape:label="day"><tspan
            sodipodi:role="line"
            id="tspan6"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;font-family:Formula1;-inkscape-font-specification:Formula1;fill:#ffffff;fill-opacity:1;stroke-width:7.836"
@@ -216,9 +196,10 @@
       <g
          id="g7"
          inkscape:label="month"
-         transform="translate(34.626847,5.5402955)">
+         transform="translate(34.626847,5.5402955)"
+         style="display:inline">
         <rect
-           style="opacity:0.997831;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:16.1904;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:16.1904;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            id="rect7"
            width="279.15674"
            height="119.34962"
@@ -227,11 +208,11 @@
            ry="47.537582" />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.997831;fill:#15151e;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;opacity:1;fill:#15151e;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
            x="78.165771"
            y="357.31732"
            id="text7"
-           inkscape:label="text"><tspan
+           inkscape:label="month"><tspan
              sodipodi:role="line"
              id="tspan7"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:88.1944px;font-family:Formula1;-inkscape-font-specification:Formula1;fill:#15151e;fill-opacity:1;stroke-width:7.836"
@@ -242,10 +223,19 @@
     <g
        id="g3"
        inkscape:label="track"
-       transform="matrix(1.2571293,0,0,1.2571293,-208.71205,272.34527)">
+       transform="matrix(1.2571293,0,0,1.2571293,-208.71205,272.34527)"
+       style="display:inline">
+      <rect
+         style="display:inline;opacity:0.997831;fill:#ffffff;fill-opacity:0.447942;stroke-width:7.13168"
+         id="rect3-5"
+         width="458.45374"
+         height="20.008284"
+         x="207.25319"
+         y="374.91269"
+         inkscape:label="track-name-bounding-box" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.8172px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.997831;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.8172px;line-height:100%;font-family:Formula1;-inkscape-font-specification:Formula1;text-align:center;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;display:inline;opacity:1;fill:#ee0000;fill-opacity:1;stroke:none;stroke-width:7.83601;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          x="436.95645"
          y="394.58563"
          id="text5"
@@ -267,7 +257,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:202.494px;writing-mode:lr-tb;direction:ltr;fill:none;fill-opacity:1;stroke:#ee0000;stroke-width:14.7;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:202.494px;writing-mode:lr-tb;direction:ltr;display:inline;fill:none;fill-opacity:1;stroke:#ee0000;stroke-width:14.7;stroke-dasharray:none;stroke-opacity:1"
        x="48.206333"
        y="403.4614"
        id="text8"

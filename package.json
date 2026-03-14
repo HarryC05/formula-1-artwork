@@ -1,0 +1,28 @@
+{
+  "name": "formula-1-artwork-generator",
+  "version": "1.0.0",
+  "description": "Generate Formula 1 race weekend artwork from CSV data",
+  "main": "generate.js",
+  "scripts": {
+    "setup-flags": "node setup-flags.js",
+    "extract-flags": "node extract-flags.js",
+    "generate": "node generate.js",
+    "test": "node generate.js --csv example.csv"
+  },
+  "keywords": [
+    "formula1",
+    "f1",
+    "artwork",
+    "svg",
+    "generator"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "csv-parser": "^3.0.0",
+    "jsdom": "^24.0.0",
+    "sharp": "^0.33.0",
+    "svg-path-properties": "^2.0.2"
+  }
+}

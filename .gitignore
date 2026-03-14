@@ -31,3 +31,9 @@ exports/
 out/
 preview/
 previews/
+
+# Node
+node_modules/
+
+# Cloned flag repository (can be regenerated with npm run setup-flags)
+flags-repo/
