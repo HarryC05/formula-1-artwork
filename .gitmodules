@@ -1,0 +1,6 @@
+[submodule "flags"]
+	path = flags
+	url = https://github.com/HatScripts/circle-flags.git
+[submodule "tracks"]
+	path = tracks
+	url = git@github.com:julesr0y/f1-circuits-svg.git
