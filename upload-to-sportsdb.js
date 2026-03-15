@@ -9,6 +9,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const csv = require('csv-parser');
+const readline = require('readline');
 require('dotenv').config();
 
 // Constants
@@ -192,6 +193,57 @@ async function getEventLinks(page) {
 }
 
 /**
+ * Prompt user for confirmation
+ */
+function promptUser(question) {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+    
+    rl.question(question, (answer) => {
+      rl.close();
+      resolve(answer.toLowerCase().trim());
+    });
+  });
+}
+
+/**
+ * Check if media already exists on the page
+ */
+async function checkMediaExists(page, imageType) {
+  // Map image types to their alt text on TheSportsDB
+  const altTextMap = {
+    'poster': 'poster thumb',
+    'thumb': 'event thumb',
+    'banner': 'Banner Thumbnail'
+  };
+  
+  const altText = altTextMap[imageType];
+  if (!altText) return false;
+  
+  try {
+    // Check if an image with this alt text exists
+    const existingImage = await page.locator(`img[alt="${altText}"]`).first();
+    const count = await existingImage.count();
+    
+    if (count > 0) {
+      // Additional check: make sure it's not a placeholder or broken image
+      const src = await existingImage.getAttribute('src').catch(() => null);
+      if (src && !src.includes('placeholder') && !src.includes('default')) {
+        return true;
+      }
+    }
+    
+    return false;
+  } catch (error) {
+    if (config.verbose) log(`  🔍 Error checking if ${imageType} exists: ${error.message}`);
+    return false;
+  }
+}
+
+/**
  * Upload a single image
  */
 async function uploadImage(page, imageType, imagePath, eventName) {
@@ -211,6 +263,22 @@ async function uploadImage(page, imageType, imagePath, eventName) {
   
   const imageTypeLabel = imageLabelMap[imageType] || imageType.charAt(0).toUpperCase() + imageType.slice(1);
   const imageTypeId = imageTypeIdMap[imageType];
+  
+  // Check if media already exists
+  const mediaExists = await checkMediaExists(page, imageType);
+  if (mediaExists) {
+    log(`  ⚠️  ${imageTypeLabel} already exists!`, 'warn');
+    
+    // Prompt user for confirmation
+    const answer = await promptUser(`  Do you want to override the existing ${imageTypeLabel}? (y/N): `);
+    
+    if (answer !== 'y' && answer !== 'yes') {
+      log(`  ⏭️  Skipping ${imageTypeLabel}`, 'info');
+      return { success: true, skipped: true };
+    }
+    
+    log(`  🔄 Overriding existing ${imageTypeLabel}...`, 'info');
+  }
   
   // Check if file exists
   if (!fs.existsSync(imagePath)) {

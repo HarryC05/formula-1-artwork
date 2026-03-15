@@ -11,6 +11,7 @@ const path = require('path');
 const csv = require('csv-parser');
 const https = require('https');
 const sharp = require('sharp');
+const readline = require('readline');
 require('dotenv').config();
 
 // Parse command line arguments first (needed for dynamic constants)
@@ -467,11 +468,68 @@ async function getEventLinks(page) {
 }
 
 /**
+ * Prompt user for confirmation
+ */
+function promptUser(question) {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+    
+    rl.question(question, (answer) => {
+      rl.close();
+      resolve(answer.toLowerCase().trim());
+    });
+  });
+}
+
+/**
+ * Check if track map already exists on the page
+ */
+async function checkTrackMapExists(page) {
+  try {
+    // Check if an image with alt text "Map Thumb" exists
+    const existingImage = await page.locator('img[alt="Map Thumb"]').first();
+    const count = await existingImage.count();
+    
+    if (count > 0) {
+      // Additional check: make sure it's not a placeholder or broken image
+      const src = await existingImage.getAttribute('src').catch(() => null);
+      if (src && !src.includes('placeholder') && !src.includes('default')) {
+        return true;
+      }
+    }
+    
+    return false;
+  } catch (error) {
+    if (config.verbose) log(`  🔍 Error checking if map exists: ${error.message}`);
+    return false;
+  }
+}
+
+/**
  * Upload track map to TheSportsDB event
  */
 async function uploadTrackMap(page, trackMapPath, eventName, eventUrl) {
   const imageTypeLabel = 'Map';
   const imageTypeId = '22';
+  
+  // Check if map already exists
+  const mapExists = await checkTrackMapExists(page);
+  if (mapExists) {
+    log(`  ⚠️  Map already exists!`, 'warn');
+    
+    // Prompt user for confirmation
+    const answer = await promptUser(`  Do you want to override the existing Map? (y/N): `);
+    
+    if (answer !== 'y' && answer !== 'yes') {
+      log(`  ⏭️  Skipping Map`, 'info');
+      return { success: true, skipped: true };
+    }
+    
+    log(`  🔄 Overriding existing Map...`, 'info');
+  }
   
   // Check if file exists
   if (!fs.existsSync(trackMapPath)) {
