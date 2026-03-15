@@ -447,7 +447,3 @@ If you need to create artwork manually:
    - Track name
    - Date and month
 4. Export to PNG/JPG for final use
-
-## License
-
-MIT
