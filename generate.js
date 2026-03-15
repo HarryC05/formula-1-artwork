@@ -34,7 +34,22 @@ const SESSION_FILENAMES = {
 
 // Track transforms
 const TRACK_TRANSFORMS = {
-  'melbourne-2': { rotate: -45 }
+  'austin-1': { rotate: 26 },
+  'baku-1': { rotate: 65 },
+  'catalunya-6': { rotate: 57.75 },
+  'hungaroring-3': { rotate: 52 },
+  'interlagos-2': { rotate: 90 },
+  'melbourne-2': { rotate: -45 },
+  'mexico-city-3': { rotate: -8.5 },
+  'monaco-6': { rotate: 45 },
+  'montreal-6': { rotate: -65 },
+  'monza-7': { rotate: -94.5 },
+  'shanghai-1': { rotate: 23.5 },
+  'silverstone-8': { rotate: 90 },
+  'spa-francorchamps-4': { rotate: -99 },
+  'spielberg-3': { rotate: -45 },
+  'yas-marina-2': { rotate: 100 },
+  'zandvoort-5': { rotate: 180 },
 };
 
 // Parse command line arguments
@@ -71,6 +86,195 @@ function replaceTextByLabel(svgContent, label, newText) {
   return svgContent.replace(regex, (match, before, oldText, after) => {
     return before + newText + after;
   });
+}
+
+function escapeXml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function extractTextBlock(svgContent, textLabel) {
+  const regex = new RegExp(
+    `(<text[^>]*inkscape:label="${textLabel}"[^>]*>[\\s\\S]*?<tspan[^>]*>)([^<]*)(</tspan>[\\s\\S]*?</text>)`,
+    'i'
+  );
+
+  const match = svgContent.match(regex);
+  if (!match) {
+    console.warn(`  ⚠️  Text element "${textLabel}" not found`);
+    return null;
+  }
+
+  return {
+    full: match[0],
+    before: match[1],
+    text: match[2],
+    after: match[3],
+  };
+}
+
+function extractFontSize(textElement) {
+  const styleMatch = textElement.match(/font-size:([\d.]+)px/i);
+  if (styleMatch) {
+    return parseFloat(styleMatch[1]);
+  }
+
+  const attrMatch = textElement.match(/font-size="([\d.]+)(?:px)?"/i);
+  if (attrMatch) {
+    return parseFloat(attrMatch[1]);
+  }
+
+  return null;
+}
+
+function extractFontFamily(textElement) {
+  const styleMatch = textElement.match(/font-family:([^;"]+)/i);
+  if (styleMatch) {
+    return styleMatch[1].trim();
+  }
+
+  const attrMatch = textElement.match(/font-family="([^"]+)"/i);
+  if (attrMatch) {
+    return attrMatch[1].trim();
+  }
+
+  return 'Formula1';
+}
+
+function extractFontWeight(textElement) {
+  const styleMatch = textElement.match(/font-weight:([^;"]+)/i);
+  if (styleMatch) {
+    return styleMatch[1].trim();
+  }
+
+  const attrMatch = textElement.match(/font-weight="([^"]+)"/i);
+  if (attrMatch) {
+    return attrMatch[1].trim();
+  }
+
+  return 'normal';
+}
+
+async function measureRenderedTextWidth(text, fontSize, fontFamily = 'Formula1', fontWeight = 'normal') {
+  const safeText = escapeXml(text);
+
+  const measureSvg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="4000" height="${Math.ceil(fontSize * 3)}">
+      <text
+        x="0"
+        y="${fontSize}"
+        style="font-family:${fontFamily}; font-size:${fontSize}px; font-weight:${fontWeight}; fill:#000;"
+      >${safeText}</text>
+    </svg>
+  `;
+
+  const { data, info } = await sharp(Buffer.from(measureSvg))
+    .png()
+    .trim()
+    .toBuffer({ resolveWithObject: true });
+
+  return info.width || 0;
+}
+
+function extractBoundingBox(svgContent, boundingBoxLabel) {
+  const bboxRegex = new RegExp(
+    `<rect\\s[^>]*inkscape:label="${boundingBoxLabel}"[^>]*\\/?>`,
+    'i'
+  );
+
+  const bboxMatch = svgContent.match(bboxRegex);
+  if (!bboxMatch) {
+    console.warn(`  ⚠️  Bounding box "${boundingBoxLabel}" not found`);
+    return null;
+  }
+
+  const bboxElement = bboxMatch[0];
+
+  const widthMatch = bboxElement.match(/width="([^"]*)"/i);
+  const xMatch = bboxElement.match(/x="([^"]*)"/i);
+  const transformMatch = bboxElement.match(/transform="([^"]*)"/i);
+
+  if (!widthMatch || !xMatch) {
+    console.warn(`  ⚠️  Could not extract dimensions from bounding box "${boundingBoxLabel}"`);
+    return null;
+  }
+
+  const translate = parseTranslate(transformMatch ? transformMatch[1] : '');
+
+  return {
+    width: parseFloat(widthMatch[1]),
+    x: parseFloat(xMatch[1]) + translate.x,
+  };
+}
+
+function setTextX(textElement, newX) {
+  let updated = textElement;
+
+  // Update <text x="...">
+  updated = updated.replace(/(<text\b[^>]*\bx=")([^"]*)(")/i, `$1${newX}$3`);
+
+  // Update all <tspan x="...">
+  updated = updated.replace(/(<tspan\b[^>]*\bx=")([^"]*)(")/gi, `$1${newX}$3`);
+
+  return updated;
+}
+
+async function scaleTextToFit(svgContent, textLabel, boundingBoxLabel, newText, options = {}) {
+  const { align = 'keep' } = options;
+
+  const bbox = extractBoundingBox(svgContent, boundingBoxLabel);
+  if (!bbox) {
+    return svgContent;
+  }
+
+  const textBlock = extractTextBlock(svgContent, textLabel);
+  if (!textBlock) {
+    return svgContent;
+  }
+
+  const originalFontSize = extractFontSize(textBlock.full);
+  if (!originalFontSize) {
+    console.warn(`  ⚠️  Could not extract font-size from "${textLabel}"`);
+    return svgContent;
+  }
+
+  const fontFamily = extractFontFamily(textBlock.full);
+  const fontWeight = extractFontWeight(textBlock.full);
+
+  const measuredWidth = await measureRenderedTextWidth(
+    newText,
+    originalFontSize,
+    fontFamily,
+    fontWeight
+  );
+
+  if (!measuredWidth) {
+    return svgContent;
+  }
+
+  const padding = 0.95;
+  const maxAllowedWidth = bbox.width * padding;
+
+  let updatedTextElement = textBlock.full;
+
+  if (measuredWidth > maxAllowedWidth) {
+    const scaleFactor = maxAllowedWidth / measuredWidth;
+    const newFontSize = originalFontSize * scaleFactor;
+
+    updatedTextElement = updatedTextElement
+      .replace(/font-size:([\d.]+)px/gi, `font-size:${newFontSize.toFixed(4)}px`)
+      .replace(/font-size="([\d.]+)(?:px)?"/gi, `font-size="${newFontSize.toFixed(4)}px"`);
+  }
+
+  if (align === 'left') {
+    updatedTextElement = setTextX(updatedTextElement, bbox.x);
+  }
+
+  return svgContent.replace(textBlock.full, updatedTextElement);
 }
 
 function extractFirstPathD(svgContent) {
@@ -316,8 +520,15 @@ async function generateArtwork(templatePath, data, type) {
     const monthIndex = parseInt(month, 10) - 1;
     const monthName = monthNames[monthIndex] || month;
 
+    const testingNo = data.TESTINGSESSION !== 'False' ? data.TESTINGSESSION : false;
+
     // Replace text content
-    svgContent = replaceTextByLabel(svgContent, 'round', `ROUND ${data.ROUND}`);
+    if (testingNo) {
+      svgContent = replaceTextByLabel(svgContent, 'round', `Testing ${testingNo}`);
+    } else {
+      svgContent = replaceTextByLabel(svgContent, 'round', `ROUND ${data.ROUND}`);
+    }
+
     svgContent = replaceTextByLabel(svgContent, 'location', data.LOCATION.toUpperCase());
     svgContent = replaceTextByLabel(svgContent, 'session', data.SESSION.toUpperCase());
     svgContent = replaceTextByLabel(svgContent, 'track-name', data.TRACKNAME);
@@ -325,16 +536,36 @@ async function generateArtwork(templatePath, data, type) {
     svgContent = replaceTextByLabel(svgContent, 'month', monthName);
     svgContent = replaceTextByLabel(svgContent, 'year', year);
 
+    // Scale text down if needed to fit width
+    svgContent = await scaleTextToFit(
+      svgContent,
+      'location',
+      'location-bounding-box',
+      data.LOCATION.toUpperCase(),
+      { align: 'left' }
+    );
+
+    svgContent = await scaleTextToFit(
+      svgContent,
+      'track-name',
+      'track-name-bounding-box',
+      data.TRACKNAME,
+      { align: 'center' }
+    );
+
     // Embed track SVG
     svgContent = embedTrack(svgContent, data.TRACKMAP);
 
     // Embed flag SVG
     svgContent = embedFlag(svgContent, data.COUNTRY);
 
+    // remove any remaining bounding box elements from the SVG
+    svgContent = svgContent.replace(/<rect\s[^>]*inkscape:label="[^"]*-bounding-box"[^>]*\/>/g, '');
+
     // Generate output path
     const sessionFilename = SESSION_FILENAMES[data.SESSION.toUpperCase()] || data.SESSION.toLowerCase().replace(/\s+/g, '-');
     const locationSlug = data.COUNTRY;
-    const outputDir = path.join(options.output, type, year, `${data.ROUND}-${locationSlug}`);
+    const outputDir = path.join(options.output, type, year, `${data.ROUND}-${locationSlug}${testingNo ? `-testing-${testingNo}` : ''}`);
     
     // Create directories
     const svgDir = path.join(outputDir, 'svg');
