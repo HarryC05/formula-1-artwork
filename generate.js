@@ -17,6 +17,10 @@ const POSTER_TEMPLATE = './posters/template.svg';
 const FLAGS_DIR = './flags/flags';
 const TRACKS_DIR = './tracks/circuits/white-outline';
 const OUTPUT_BASE = './';
+const OUTPUT_SIZES = {
+  thumbnails: { width: 1280, height: 720 },
+  posters: { width: 680, height: 1000 }
+};
 
 // Session filename mapping
 const SESSION_FILENAMES = {
@@ -582,11 +586,13 @@ async function generateArtwork(templatePath, data, type) {
     const svgPath = path.join(svgDir, `${sessionFilename}.svg`);
     fs.writeFileSync(svgPath, svgContent);
     console.log(`  ✓ Generated SVG: ${svgPath}`);
+    const outputSize = OUTPUT_SIZES[type];
 
     // Generate PNG
     try {
       const pngPath = path.join(pngDir, `${sessionFilename}.png`);
-      await sharp(Buffer.from(svgContent))
+      await sharp(Buffer.from(svgContent), { density: 300 })
+        .resize(outputSize.width, outputSize.height)
         .png()
         .toFile(pngPath);
       console.log(`  ✓ Generated PNG: ${pngPath}`);
@@ -597,7 +603,8 @@ async function generateArtwork(templatePath, data, type) {
     // Generate JPG
     try {
       const jpgPath = path.join(jpgDir, `${sessionFilename}.jpg`);
-      await sharp(Buffer.from(svgContent))
+      await sharp(Buffer.from(svgContent), { density: 300 })
+        .resize(outputSize.width, outputSize.height)
         .jpeg({ quality: 90 })
         .toFile(jpgPath);
       console.log(`  ✓ Generated JPG: ${jpgPath}`);
