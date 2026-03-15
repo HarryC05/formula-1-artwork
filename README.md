@@ -20,7 +20,7 @@ thumbnails/
 2. Gather assets:
    - Circuit SVG from [f1-circuits-svg](https://github.com/julesr0y/f1-circuits-svg/tree/main)
    - Round/session info from [formula1.com](https://formula1.com)
-   - Country flag from Wikipedia
+   - Country flag from [circle-flags](https://github.com/HatScripts/circle-flags/tree/gh-pages)
 3. Customize the template:
    - Round number
    - Country name
