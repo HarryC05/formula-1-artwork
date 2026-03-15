@@ -37,3 +37,8 @@ node_modules/
 
 # Cloned flag repository (can be regenerated with npm run setup-flags)
 flags-repo/
+
+# TheSportsDB upload automation
+.env
+playwright-state.json
+upload-logs/
