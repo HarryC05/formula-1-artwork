@@ -2,7 +2,7 @@
 
 /**
  * Formula 1 Artwork Generator
- * Generates posters and thumbnails from CSV data
+ * Generates posters, thumbnails, and banners from CSV data
  */
 
 const fs = require('fs');
@@ -14,12 +14,14 @@ const { program } = require('commander');
 // Configuration
 const THUMBNAIL_TEMPLATE = './thumbnails/template.svg';
 const POSTER_TEMPLATE = './posters/template.svg';
+const BANNER_TEMPLATE = './banners/template.svg';
 const FLAGS_DIR = './flags/flags';
 const TRACKS_DIR = './tracks/circuits/white-outline';
 const OUTPUT_BASE = './';
 const OUTPUT_SIZES = {
   thumbnails: { width: 1280, height: 720 },
-  posters: { width: 680, height: 1000 }
+  posters: { width: 680, height: 1000 },
+  banners: { width: 1000, height: 185 },
 };
 
 // Session filename mapping
@@ -61,7 +63,7 @@ program
   .name('generate')
   .description('Generate Formula 1 artwork from CSV data')
   .requiredOption('--csv <path>', 'Path to CSV file')
-  .option('--type <type>', 'Type of artwork to generate: both, thumbnails, posters', 'both')
+  .option('--type <type>', 'Type of artwork to generate: all, thumbnails, posters, banners', 'all')
   .option('--output <directory>', 'Output directory', OUTPUT_BASE)
   .parse(process.argv);
 
@@ -536,6 +538,7 @@ async function generateArtwork(templatePath, data, type) {
     svgContent = replaceTextByLabel(svgContent, 'location', data.LOCATION.toUpperCase());
     svgContent = replaceTextByLabel(svgContent, 'session', data.SESSION.toUpperCase());
     svgContent = replaceTextByLabel(svgContent, 'track-name', data.TRACKNAME);
+    svgContent = replaceTextByLabel(svgContent, 'full-name', data.FULLNAME.toUpperCase());
     svgContent = replaceTextByLabel(svgContent, 'day', day);
     svgContent = replaceTextByLabel(svgContent, 'month', monthName);
     svgContent = replaceTextByLabel(svgContent, 'year', year);
@@ -557,8 +560,20 @@ async function generateArtwork(templatePath, data, type) {
       { align: 'center' }
     );
 
+    if (type === 'banners') {
+      svgContent = await scaleTextToFit(
+        svgContent,
+        'full-name',
+        'full-name-bounding-box',
+        data.FULLNAME.toUpperCase(),
+        { align: 'center' }
+      );
+    }
+
     // Embed track SVG
-    svgContent = embedTrack(svgContent, data.TRACKMAP);
+    if (type !== 'banners') {
+      svgContent = embedTrack(svgContent, data.TRACKMAP);
+    }
 
     // Embed flag SVG
     svgContent = embedFlag(svgContent, data.COUNTRY);
@@ -638,14 +653,20 @@ async function main() {
       console.log(`📝 Processing: Round ${row.ROUND} - ${row.LOCATION} - ${row.SESSION}`);
 
       try {
-        if (options.type === 'both' || options.type === 'thumbnails') {
+        if (options.type === 'all' || options.type === 'thumbnails') {
           const success = await generateArtwork(THUMBNAIL_TEMPLATE, row, 'thumbnails');
           if (success) successCount++;
           else errorCount++;
         }
 
-        if (options.type === 'both' || options.type === 'posters') {
+        if (options.type === 'all' || options.type === 'posters') {
           const success = await generateArtwork(POSTER_TEMPLATE, row, 'posters');
+          if (success) successCount++;
+          else errorCount++;
+        }
+
+        if (options.type === 'all' || options.type === 'banners') {
+          const success = await generateArtwork(BANNER_TEMPLATE, row, 'banners');
           if (success) successCount++;
           else errorCount++;
         }
