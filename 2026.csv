@@ -100,6 +100,7 @@ ROUND,LOCATION,SESSION,DATE,COUNTRY,TRACKNAME,TRACKMAP,FULLNAME,TESTINGSESSION
 19,United States,PRACTICE 03,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
 19,United States,QUALIFYING,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
 19,United States,RACE,2026-10-25,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+20,Mexico,PRACTICE 01,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
 20,Mexico,PRACTICE 02,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
 20,Mexico,PRACTICE 03,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
 20,Mexico,QUALIFYING,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
