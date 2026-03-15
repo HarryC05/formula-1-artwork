@@ -11,7 +11,13 @@
     "upload": "node upload-to-sportsdb.js",
     "upload:dry-run": "node upload-to-sportsdb.js --dry-run",
     "upload:visible": "node upload-to-sportsdb.js --headless=false",
-    "upload:verbose": "node upload-to-sportsdb.js --verbose"
+    "upload:verbose": "node upload-to-sportsdb.js --verbose",
+    "trackmaps": "node download-upload-trackmaps.js --csv 2026.csv",
+    "trackmaps:download": "node download-upload-trackmaps.js --csv 2026.csv --download-only",
+    "trackmaps:upload": "node download-upload-trackmaps.js --csv 2026.csv --upload-only",
+    "trackmaps:dry-run": "node download-upload-trackmaps.js --csv 2026.csv --dry-run",
+    "trackmaps:visible": "node download-upload-trackmaps.js --csv 2026.csv --headless=false",
+    "trackmaps:verbose": "node download-upload-trackmaps.js --csv 2026.csv --verbose"
   },
   "keywords": [
     "formula1",

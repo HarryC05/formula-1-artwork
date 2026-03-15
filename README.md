@@ -30,6 +30,28 @@ npm run upload:visible
 npm run upload
 ```
 
+### Download & Upload Track Maps
+
+```bash
+# Download all track maps from Formula1.com and upload to TheSportsDB
+npm run trackmaps -- --csv 2026.csv
+
+# Download only (no upload)
+npm run trackmaps:download -- --csv 2026.csv
+
+# Upload only (use existing maps in track-maps/2026/)
+npm run trackmaps:upload -- --csv 2026.csv
+
+# Dry run (test without downloading/uploading)
+npm run trackmaps:dry-run -- --csv 2026.csv
+
+# Watch browser automation
+npm run trackmaps:visible -- --csv 2026.csv
+
+# Override year manually
+node download-upload-trackmaps.js --csv my-races.csv --year 2027
+```
+
 ## Project Structure
 
 ```
@@ -47,6 +69,15 @@ formula-1-artwork/
 ├── banners/
 │   ├── template.svg          # Template for banners (1000x185)
 │   └── 2026/...
+├── track-maps/
+│   └── 2026/
+│       ├── 00-bh-testing-01/
+│       │   ├── track.webp      # Original high-res WebP
+│       │   └── track.jpg       # Converted JPG (1280x720)
+│       ├── 01-au/
+│       │   ├── track.webp
+│       │   └── track.jpg
+│       └── ...
 ├── flags/flags/              # Country flag SVGs (circle-flags)
 ├── tracks/circuits/          # Track layout SVGs (f1-circuits-svg)
 ├── 2026.csv                  # Race calendar data
@@ -249,6 +280,156 @@ node upload-to-sportsdb.js --start-row=50
 - Verify paths in dry-run mode
 - Confirm you have edit permissions on TheSportsDB
 
+## Track Maps Automation
+
+The `download-upload-trackmaps.js` script downloads track map images from Formula1.com and uploads them to TheSportsDB.
+
+### How It Works
+
+**Phase 1: Download**
+1. Reads `2026.csv` to identify unique circuits (24 circuits)
+2. For each circuit:
+   - Navigates to the race page on Formula1.com (e.g., `/en/racing/2026/australia`)
+   - Finds the detailed track map image
+   - Downloads high-resolution version (h_2000) as WebP
+   - Converts to JPG and resizes to 1280x720 (maintaining aspect ratio)
+   - Copies both WebP (original) and JPG (converted) to all relevant round-country folders
+   - Each circuit is downloaded once, then copied to all sessions using that circuit
+   - Example: Bahrain circuit → copied to `00-bh-testing-01`, `00-bh-testing-02`, `04-bh`
+
+**Phase 2: Upload**
+1. Logs in to TheSportsDB
+2. For each event session (126 sessions):
+   - Navigates to the event page
+   - Uploads the track map JPG from `track-maps/2026/{round}-{country}/track.jpg`
+   - Uses the "Map" upload type (t=22)
+
+### Prerequisites
+
+```bash
+# Ensure credentials are set in .env
+SPORTSDB_USERNAME=your_username
+SPORTSDB_PASSWORD=your_password
+```
+
+### Usage
+
+```bash
+# Full workflow: download + upload all track maps (uses 2026.csv by default)
+npm run trackmaps
+
+# Download only (saves to tracks/2026/)
+npm run trackmaps:download
+
+# Upload only (uses existing files)
+npm run trackmaps:upload
+
+# Dry run - test without downloading/uploading
+npm run trackmaps:dry-run
+
+# Visual mode - watch browser automation
+npm run trackmaps:visible
+
+# Advanced options with custom CSV
+node download-upload-trackmaps.js --csv 2027.csv
+node download-upload-trackmaps.js --csv 2026.csv --download-only --verbose
+node download-upload-trackmaps.js --csv 2026.csv --upload-only --start-row=50 --limit=10
+node download-upload-trackmaps.js --csv 2026.csv --force-download  # Re-download existing maps
+
+# Override year manually (if CSV filename doesn't contain year)
+node download-upload-trackmaps.js --csv my-races.csv --year 2027
+```
+
+### Output
+
+Track maps are organized in a folder structure matching the artwork format:
+```
+track-maps/
+  2026/
+    00-bh-testing-01/
+      track.webp      # Original high-res WebP from F1 site
+      track.jpg       # Converted JPG (1280x720)
+    00-bh-testing-02/
+      track.webp
+      track.jpg
+    01-au/
+      track.webp
+      track.jpg
+    02-cn/
+      track.webp
+      track.jpg
+    ...
+```
+
+Each folder contains:
+- **track.webp**: Original high-resolution image from Formula1.com
+- **track.jpg**: Converted and resized version (1280x720, uploaded to TheSportsDB)
+
+### Command Line Options
+
+- `--csv <file>`: CSV file to process (year auto-detected from filename, e.g., "2026.csv" → 2026)
+- `--year <year>`: Override year (default: extracted from CSV filename)
+- `--download-only`: Only download maps, don't upload
+- `--upload-only`: Skip download, use existing maps
+- `--dry-run`: Test mode, no actual downloads/uploads
+- `--headless=false`: Show browser window
+- `--verbose`: Detailed logging
+- `--start-row=N`: Start uploading from row N
+- `--limit=N`: Process only N events
+- `--force-download`: Re-download even if files exist
+
+### Performance
+
+- **Download Phase**: ~2-4 seconds per circuit (24 circuits ≈ 1-2 minutes)
+- **Upload Phase**: ~3-5 seconds per event (126 events ≈ 6-10 minutes)
+- **Total Runtime**: ~10-15 minutes for full workflow
+
+### Logging
+
+- **Log Files**: `upload-logs/trackmaps-YYYY-MM-DD.log`
+- **Error Screenshots**: Saved to `upload-logs/` on failures
+- **Summary Report**: Shows download/upload statistics
+
+### Testing Workflow
+
+1. **Dry run**: Test without actual operations
+   ```bash
+   npm run trackmaps:dry-run
+   ```
+
+2. **Download test**: Download just a few circuits
+   ```bash
+   node download-upload-trackmaps.js --download-only --headless=false --verbose
+   ```
+   Then manually check `track-maps/2026/` folders for WebP + JPG files
+
+3. **Upload test**: Upload to first few events
+   ```bash
+   node download-upload-trackmaps.js --upload-only --limit=3 --headless=false
+   ```
+
+4. **Full run**: Complete workflow
+   ```bash
+   npm run trackmaps
+   ```
+
+### Troubleshooting
+
+**Track map not found on F1 site**:
+- Some race pages might not have track maps yet
+- Pre-season testing pages may not have maps
+- Script automatically uses the Grand Prix page URL when available
+
+**Conversion errors**:
+- Ensure Sharp is installed: `npm install sharp`
+- Check disk space for image files
+
+**Upload failures**:
+- Verify credentials in `.env`
+- Check that JPG files exist in `track-maps/2026/{round}-{country}/track.jpg`
+- Run with `--headless=false` to see browser actions
+- Check `upload-logs/` for error screenshots
+
 ## Manual Artwork Creation
 
 If you need to create artwork manually:
@@ -258,6 +439,7 @@ If you need to create artwork manually:
    - Circuit SVG from [f1-circuits-svg](https://github.com/julesr0y/f1-circuits-svg/tree/main)
    - Round/session info from [formula1.com](https://formula1.com)
    - Country flag from [circle-flags](https://github.com/HatScripts/circle-flags/tree/gh-pages)
+   - Track Maps from [formula1.com](https://formula1.com)
 3. Customize the template:
    - Round number
    - Country name
