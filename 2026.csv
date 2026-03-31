@@ -20,108 +20,98 @@ ROUND,LOCATION,SESSION,DATE,COUNTRY,TRACKNAME,TRACKMAP,FULLNAME,TESTINGSESSION
 03,Japan,PRACTICE 03,2026-03-28,jp,Suzuka Circuit,suzuka-2,Japanese Grand Prix,False
 03,Japan,QUALIFYING,2026-03-28,jp,Suzuka Circuit,suzuka-2,Japanese Grand Prix,False
 03,Japan,RACE,2026-03-29,jp,Suzuka Circuit,suzuka-2,Japanese Grand Prix,False
-04,Bahrain,PRACTICE 01,2026-04-10,bh,Bahrain International Circuit,bahrain-1,Bahrain Grand Prix,False
-04,Bahrain,PRACTICE 02,2026-04-10,bh,Bahrain International Circuit,bahrain-1,Bahrain Grand Prix,False
-04,Bahrain,PRACTICE 03,2026-04-11,bh,Bahrain International Circuit,bahrain-1,Bahrain Grand Prix,False
-04,Bahrain,QUALIFYING,2026-04-11,bh,Bahrain International Circuit,bahrain-1,Bahrain Grand Prix,False
-04,Bahrain,RACE,2026-04-12,bh,Bahrain International Circuit,bahrain-1,Bahrain Grand Prix,False
-05,Saudi Arabia,PRACTICE 01,2026-04-17,sa,Jeddah Corniche Circuit,jeddah-1,Saudi Arabian Grand Prix,False
-05,Saudi Arabia,PRACTICE 02,2026-04-17,sa,Jeddah Corniche Circuit,jeddah-1,Saudi Arabian Grand Prix,False
-05,Saudi Arabia,PRACTICE 03,2026-04-18,sa,Jeddah Corniche Circuit,jeddah-1,Saudi Arabian Grand Prix,False
-05,Saudi Arabia,QUALIFYING,2026-04-18,sa,Jeddah Corniche Circuit,jeddah-1,Saudi Arabian Grand Prix,False
-05,Saudi Arabia,RACE,2026-04-19,sa,Jeddah Corniche Circuit,jeddah-1,Saudi Arabian Grand Prix,False
-06,Miami,PRACTICE 01,2026-05-01,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
-06,Miami,PRACTICE 02,2026-05-01,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
-06,Miami,PRACTICE 03,2026-05-02,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
-06,Miami,QUALIFYING,2026-05-02,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
-06,Miami,RACE,2026-05-03,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
-07,Canada,PRACTICE 01,2026-05-22,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
-07,Canada,SPRINT QUALIFYING,2026-05-22,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
-07,Canada,SPRINT,2026-05-23,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
-07,Canada,QUALIFYING,2026-05-23,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
-07,Canada,RACE,2026-05-24,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
-08,Monaco,PRACTICE 01,2026-06-05,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
-08,Monaco,PRACTICE 02,2026-06-05,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
-08,Monaco,PRACTICE 03,2026-06-06,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
-08,Monaco,QUALIFYING,2026-06-06,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
-08,Monaco,RACE,2026-06-07,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
-09,Barcelona-Catalunya,PRACTICE 01,2026-05-12,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
-09,Barcelona-Catalunya,PRACTICE 02,2026-05-12,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
-09,Barcelona-Catalunya,PRACTICE 03,2026-05-13,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
-09,Barcelona-Catalunya,QUALIFYING,2026-05-13,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
-09,Barcelona-Catalunya,RACE,2026-05-14,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
-10,Austria,PRACTICE 01,2026-06-26,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
-10,Austria,PRACTICE 02,2026-06-26,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
-10,Austria,PRACTICE 03,2026-06-27,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
-10,Austria,QUALIFYING,2026-06-27,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
-10,Austria,RACE,2026-06-28,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
-11,Great Britain,PRACTICE 01,2026-07-03,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
-11,Great Britain,SPRINT QUALIFYING,2026-07-03,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
-11,Great Britain,SPRINT,2026-07-04,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
-11,Great Britain,QUALIFYING,2026-07-04,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
-11,Great Britain,RACE,2026-07-05,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
-12,Belgium,PRACTICE 01,2026-07-17,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
-12,Belgium,PRACTICE 02,2026-07-17,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
-12,Belgium,PRACTICE 03,2026-07-18,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
-12,Belgium,QUALIFYING,2026-07-18,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
-12,Belgium,RACE,2026-07-19,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
-13,Hungary,PRACTICE 01,2026-07-24,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
-13,Hungary,PRACTICE 02,2026-07-24,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
-13,Hungary,PRACTICE 03,2026-07-25,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
-13,Hungary,QUALIFYING,2026-07-25,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
-13,Hungary,RACE,2026-07-26,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
-14,Netherlands,PRACTICE 01,2026-08-21,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
-14,Netherlands,SPRINT QUALIFYING,2026-08-21,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
-14,Netherlands,SPRINT,2026-08-22,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
-14,Netherlands,QUALIFYING,2026-08-22,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
-14,Netherlands,RACE,2026-08-23,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
-15,Italy,PRACTICE 01,2026-09-04,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
-15,Italy,PRACTICE 02,2026-09-04,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
-15,Italy,PRACTICE 03,2026-09-05,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
-15,Italy,QUALIFYING,2026-09-05,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
-15,Italy,RACE,2026-09-06,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
-16,Spain,PRACTICE 01,2026-09-11,es,Madring,madring-1,Gran Premio de España,False
-16,Spain,PRACTICE 02,2026-09-11,es,Madring,madring-1,Gran Premio de España,False
-16,Spain,PRACTICE 03,2026-09-12,es,Madring,madring-1,Gran Premio de España,False
-16,Spain,QUALIFYING,2026-09-12,es,Madring,madring-1,Gran Premio de España,False
-16,Spain,RACE,2026-09-13,es,Madring,madring-1,Gran Premio de España,False
-17,Azerbaijan,PRACTICE 01,2026-09-24,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
-17,Azerbaijan,PRACTICE 02,2026-09-24,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
-17,Azerbaijan,PRACTICE 03,2026-09-25,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
-17,Azerbaijan,QUALIFYING,2026-09-25,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
-17,Azerbaijan,RACE,2026-09-26,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
-18,Singapore,PRACTICE 01,2026-10-09,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
-18,Singapore,SPRINT QUALIFYING,2026-10-09,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
-18,Singapore,SPRINT,2026-10-10,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
-18,Singapore,QUALIFYING,2026-10-10,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
-18,Singapore,RACE,2026-10-11,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
-19,United States,PRACTICE 01,2026-10-23,us,Circuit of the Americas,austin-1,United States Grand Prix,False
-19,United States,PRACTICE 02,2026-10-23,us,Circuit of the Americas,austin-1,United States Grand Prix,False
-19,United States,PRACTICE 03,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
-19,United States,QUALIFYING,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
-19,United States,RACE,2026-10-25,us,Circuit of the Americas,austin-1,United States Grand Prix,False
-20,Mexico,PRACTICE 01,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
-20,Mexico,PRACTICE 02,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
-20,Mexico,PRACTICE 03,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
-20,Mexico,QUALIFYING,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
-20,Mexico,RACE,2026-11-01,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
-21,Brazil,PRACTICE 01,2026-11-06,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
-21,Brazil,PRACTICE 02,2026-11-06,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
-21,Brazil,PRACTICE 03,2026-11-07,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
-21,Brazil,QUALIFYING,2026-11-07,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
-21,Brazil,RACE,2026-11-08,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
-22,Las Vegas,PRACTICE 01,2026-11-19,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
-22,Las Vegas,PRACTICE 02,2026-11-19,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
-22,Las Vegas,PRACTICE 03,2026-11-20,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
-22,Las Vegas,QUALIFYING,2026-11-20,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
-22,Las Vegas,RACE,2026-11-21,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
-23,Qatar,PRACTICE 01,2026-11-27,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
-23,Qatar,PRACTICE 02,2026-11-27,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
-23,Qatar,PRACTICE 03,2026-11-28,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
-23,Qatar,QUALIFYING,2026-11-28,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
-23,Qatar,RACE,2026-11-29,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
-24,Abu Dhabi,PRACTICE 01,2026-12-04,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
-24,Abu Dhabi,PRACTICE 02,2026-12-04,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
-24,Abu Dhabi,PRACTICE 03,2026-12-05,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
-24,Abu Dhabi,QUALIFYING,2026-12-05,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
-24,Abu Dhabi,RACE,2026-12-06,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
+04,Miami,PRACTICE 01,2026-05-01,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
+04,Miami,PRACTICE 02,2026-05-01,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
+04,Miami,PRACTICE 03,2026-05-02,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
+04,Miami,QUALIFYING,2026-05-02,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
+04,Miami,RACE,2026-05-03,us,Miami International Autodrome,miami-1,Miami Grand Prix,False
+05,Canada,PRACTICE 01,2026-05-22,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
+05,Canada,SPRINT QUALIFYING,2026-05-22,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
+05,Canada,SPRINT,2026-05-23,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
+05,Canada,QUALIFYING,2026-05-23,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
+05,Canada,RACE,2026-05-24,ca,Circuit Gilles Villeneuve,montreal-6,Grand Prix Du Canada,False
+06,Monaco,PRACTICE 01,2026-06-05,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
+06,Monaco,PRACTICE 02,2026-06-05,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
+06,Monaco,PRACTICE 03,2026-06-06,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
+06,Monaco,QUALIFYING,2026-06-06,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
+06,Monaco,RACE,2026-06-07,mc,Circuit de Monaco,monaco-6,Grand Prix de Monaco,False
+07,Barcelona-Catalunya,PRACTICE 01,2026-05-12,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
+07,Barcelona-Catalunya,PRACTICE 02,2026-05-12,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
+07,Barcelona-Catalunya,PRACTICE 03,2026-05-13,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
+07,Barcelona-Catalunya,QUALIFYING,2026-05-13,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
+07,Barcelona-Catalunya,RACE,2026-05-14,es,Circuit de Barcelona-Catalunya,catalunya-6,Gran Premio De Barcelona-Catalunya,False
+08,Austria,PRACTICE 01,2026-06-26,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
+08,Austria,PRACTICE 02,2026-06-26,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
+08,Austria,PRACTICE 03,2026-06-27,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
+08,Austria,QUALIFYING,2026-06-27,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
+08,Austria,RACE,2026-06-28,at,Red Bull Ring,spielberg-3,Austrian Grand Prix,False
+09,Great Britain,PRACTICE 01,2026-07-03,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
+09,Great Britain,SPRINT QUALIFYING,2026-07-03,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
+09,Great Britain,SPRINT,2026-07-04,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
+09,Great Britain,QUALIFYING,2026-07-04,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
+09,Great Britain,RACE,2026-07-05,gb,Silverstone Circuit,silverstone-8,British Grand Prix,False
+10,Belgium,PRACTICE 01,2026-07-17,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
+10,Belgium,PRACTICE 02,2026-07-17,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
+10,Belgium,PRACTICE 03,2026-07-18,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
+10,Belgium,QUALIFYING,2026-07-18,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
+10,Belgium,RACE,2026-07-19,be,Circuit de Spa-Francorchamps,spa-francorchamps-4,Belgian Grand Prix,False
+11,Hungary,PRACTICE 01,2026-07-24,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
+11,Hungary,PRACTICE 02,2026-07-24,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
+11,Hungary,PRACTICE 03,2026-07-25,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
+11,Hungary,QUALIFYING,2026-07-25,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
+11,Hungary,RACE,2026-07-26,hu,Hungaroring,hungaroring-3,Hungarian Grand Prix,False
+12,Netherlands,PRACTICE 01,2026-08-21,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
+12,Netherlands,SPRINT QUALIFYING,2026-08-21,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
+12,Netherlands,SPRINT,2026-08-22,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
+12,Netherlands,QUALIFYING,2026-08-22,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
+12,Netherlands,RACE,2026-08-23,nl,Circuit Zandvoort,zandvoort-5,Dutch Grand Prix,False
+13,Italy,PRACTICE 01,2026-09-04,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
+13,Italy,PRACTICE 02,2026-09-04,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
+13,Italy,PRACTICE 03,2026-09-05,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
+13,Italy,QUALIFYING,2026-09-05,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
+13,Italy,RACE,2026-09-06,it,Monza Circuit,monza-7,Gran Premio d'Italia,False
+14,Spain,PRACTICE 01,2026-09-11,es,Madring,madring-1,Gran Premio de España,False
+14,Spain,PRACTICE 02,2026-09-11,es,Madring,madring-1,Gran Premio de España,False
+14,Spain,PRACTICE 03,2026-09-12,es,Madring,madring-1,Gran Premio de España,False
+14,Spain,QUALIFYING,2026-09-12,es,Madring,madring-1,Gran Premio de España,False
+14,Spain,RACE,2026-09-13,es,Madring,madring-1,Gran Premio de España,False
+15,Azerbaijan,PRACTICE 01,2026-09-24,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
+15,Azerbaijan,PRACTICE 02,2026-09-24,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
+15,Azerbaijan,PRACTICE 03,2026-09-25,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
+15,Azerbaijan,QUALIFYING,2026-09-25,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
+15,Azerbaijan,RACE,2026-09-26,az,Baku City Circuit,baku-1,Azerbaijan Grand Prix,False
+16,Singapore,PRACTICE 01,2026-10-09,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
+16,Singapore,SPRINT QUALIFYING,2026-10-09,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
+16,Singapore,SPRINT,2026-10-10,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
+16,Singapore,QUALIFYING,2026-10-10,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
+16,Singapore,RACE,2026-10-11,sg,Marina Bay Street Circuit,marina-bay-4,Singapore Grand Prix,False
+17,United States,PRACTICE 01,2026-10-23,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+17,United States,PRACTICE 02,2026-10-23,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+17,United States,PRACTICE 03,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+17,United States,QUALIFYING,2026-10-24,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+17,United States,RACE,2026-10-25,us,Circuit of the Americas,austin-1,United States Grand Prix,False
+18,Mexico,PRACTICE 01,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
+18,Mexico,PRACTICE 02,2026-10-30,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
+18,Mexico,PRACTICE 03,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
+18,Mexico,QUALIFYING,2026-10-31,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
+18,Mexico,RACE,2026-11-01,mx,Autódromo Hermanos Rodríguez,mexico-city-3,Gran Premio De La Ciudad De México,False
+19,Brazil,PRACTICE 01,2026-11-06,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
+19,Brazil,PRACTICE 02,2026-11-06,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
+19,Brazil,PRACTICE 03,2026-11-07,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
+19,Brazil,QUALIFYING,2026-11-07,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
+19,Brazil,RACE,2026-11-08,br,Autódromo José Carlos Pace,interlagos-2,Grande Prêmio De São Paulo,False
+20,Las Vegas,PRACTICE 01,2026-11-19,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
+20,Las Vegas,PRACTICE 02,2026-11-19,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
+20,Las Vegas,PRACTICE 03,2026-11-20,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
+20,Las Vegas,QUALIFYING,2026-11-20,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
+20,Las Vegas,RACE,2026-11-21,us,Las Vegas Strip Circuit,las-vegas-1,Las Vegas Grand Prix,False
+21,Qatar,PRACTICE 01,2026-11-27,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
+21,Qatar,PRACTICE 02,2026-11-27,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
+21,Qatar,PRACTICE 03,2026-11-28,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
+21,Qatar,QUALIFYING,2026-11-28,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
+21,Qatar,RACE,2026-11-29,qa,Lusail International Circuit,lusail-1,Qatar Grand Prix,False
+22,Abu Dhabi,PRACTICE 01,2026-12-04,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
+22,Abu Dhabi,PRACTICE 02,2026-12-04,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
+22,Abu Dhabi,PRACTICE 03,2026-12-05,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
+22,Abu Dhabi,QUALIFYING,2026-12-05,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
+22,Abu Dhabi,RACE,2026-12-06,ae,Yas Marina Circuit,yas-marina-2,Abu Dhabi Grand Prix,False
