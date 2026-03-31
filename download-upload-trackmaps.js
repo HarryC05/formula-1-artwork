@@ -250,8 +250,8 @@ async function findTrackMapUrl(page, raceName) {
         }))
         .filter(img => {
           const src = img.src.toLowerCase();
-          const alt = img.alt.toLowerCase();
-          return (src.includes('track') || src.includes('circuit')) && 
+          return (!src.includes('trackside-images')) &&
+                 (src.includes('track') || src.includes('circuit')) && 
                  (src.includes('detailed') || src.includes('2026'));
         })
     );
